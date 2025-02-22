@@ -22,3 +22,5 @@ Please note that the application is not fully complete. While you can test the g
 ## Installation
 
 To run the application locally, just launch the index.html file to open it in your browser
+
+A full web app is coming soon
