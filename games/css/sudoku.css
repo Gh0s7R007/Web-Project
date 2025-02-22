@@ -1,0 +1,163 @@
+.sudoku-container {
+    margin-top: var(--nav-height);
+    padding: 2rem;
+    min-height: calc(100vh - var(--nav-height) - 60px);
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center; /* Center buttons vertically */
+    gap: 0.5rem; /* Space between buttons */
+}
+
+.sudoku-grid-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-items: center;
+}
+
+#sudoku-grid {
+    display: grid;
+    gap: 1px; /* Space between cells */
+    background: #333; /* Background for the grid */
+    max-width: 70%;
+    min-width: 30%; /* Allow responsive width */
+    aspect-ratio: 1; /* Keep it square */
+    grid-template-columns: repeat(9, 1fr); /* 9 columns */
+    grid-template-rows: repeat(9, 1fr); /* 9 rows */
+}
+
+/* Vertical lines for every 3 columns */
+.sudoku-cell:nth-child(3n) {
+    border-right: 3px solid #333; /* Bold right border for every 3rd cell */
+}
+/* Bold top border for the first row */
+.sudoku-cell:nth-child(-n+9) {
+    border-top: 3px solid #333; /* Bold top border for the top cells */
+}
+
+/* Bold left border for the first column */
+.sudoku-cell:nth-child(9n+1) {
+    border-left: 3px solid #333; /* Bold left border for the left cells */
+}
+
+
+
+.sudoku-cell:nth-child(n + 19):nth-child(-n + 27),
+.sudoku-cell:nth-child(n + 46):nth-child(-n + 54),
+.sudoku-cell:nth-child(n + 73):nth-child(-n + 81)
+{ 
+    border-bottom: 3px solid #333; /* Bold bottom border for every 3 rows */
+}
+
+.sudoku-cell {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.sudoku-cell input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background: transparent;
+}
+
+.sudoku-cell .clue {
+    position: absolute;
+    font-size: 0.6rem;
+    color: #666;
+    top: 2px;
+    left: 2px;
+}
+
+.sudoku-cell input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Styles for the 3x3 grid lines */
+/* .sudoku-cell:nth-child(3n) {
+    border-right: 3px solid #333;
+} */
+
+/* .sudoku-cell:nth-last-child(-n+9):nth-child(n+7),
+.sudoku-cell:nth-last-child(-n+18):nth-child(n+16) {
+    border-bottom: 3px solid #333;
+} */
+
+.controls-panel {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.timer-display {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Highlight effect for correct/incorrect cells */
+.sudoku-cell.correct input {
+    background-color: rgba(40, 167, 69, 0.2);
+}
+
+.sudoku-cell.incorrect input {
+    background-color: rgba(220, 53, 69, 0.2);
+}

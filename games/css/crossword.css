@@ -1,0 +1,164 @@
+/* crossword.css */
+.crossword-container {
+    margin-top: var(--nav-height);
+    padding: 2rem;
+    min-height: calc(100vh - var(--nav-height) - 60px);
+}
+
+.game-panel {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.crossword-grid-container {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#crossword-grid {
+    display: grid;
+    gap: 1px;
+    background: #333;
+    padding: 1px;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.grid-cell {
+    background: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-cell.black {
+    background: #333;
+}
+
+.grid-cell input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background: transparent;
+}
+
+.grid-cell .number {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-size: 0.7rem;
+    color: #666;
+}
+
+.clues-panel {
+    flex: 1;
+    min-width: 300px;
+    max-height: 600px;
+    overflow-y: auto;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.clues-section {
+    margin-bottom: 1.5rem;
+}
+
+.clues-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.clues-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.clue-item {
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clue-item:hover {
+    background-color: #f0f0f0;
+}
+
+.clue-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.controls-panel {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.timer-display {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Highlight effect for correct/incorrect cells */
+.grid-cell.correct input {
+    background-color: rgba(40, 167, 69, 0.2);
+}
+
+.grid-cell.incorrect input {
+    background-color: rgba(220, 53, 69, 0.2);
+}

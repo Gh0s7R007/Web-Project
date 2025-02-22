@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats - Quizoku-Croisés</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/results.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <!-- Same navigation as index.html -->
+        <a href="index.html" class="nav-logo">Quizoku-Croisés</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="quiz-start.html">Quiz</a></li>
+            <li><a href="crossword.html">Mots Croisés</a></li>
+            <li><a href="sudoku.html">Sudoku</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="../index.html">🏠</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+<br><br>
+    <main class="results-container">
+        <div class="results-card">
+            <h1>Vos Résultats</h1>
+            <div class="score-summary">
+                <div class="score-item">
+                    <h2>Résultat du Quiz</h2>
+                    <div class="score-container">
+                        <div class="score">
+                            <span id="quiz-score">0</span>
+                            <span> / </span>
+                            <span class="score-label">20 Points</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements-section">
+                <h2>Succès Débloqués</h2>
+                <div id="achievements-container" class="achievements-grid"></div>
+            </div>
+
+            <div class="action-buttons">
+                <button onclick="location.href='quiz-start.html'" class="btn btn-primary">Rejouer le Quiz</button>
+                <button onclick="location.href='crossword.html'" class="btn btn-secondary">Nouvelle Partie Mots Croisés</button>
+                <button onclick="location.href='index.html'" class="btn btn-outline">Retour à l'Accueil</button>
+            </div>
+        </div>
+    </main>
+    <br><br>
+
+    <footer style = "position: fixed; bottom: 0; width:100% ">
+        <p>&copy; 2025 Quizoku-Croisés. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>

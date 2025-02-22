@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Quizoku-Croisés</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <!-- Same navigation as index.html -->
+        <a href="index.html" class="nav-logo">Quizoku-Croisés</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="quiz-start.html">Quiz</a></li>
+            <li><a href="crossword.html">Mots Croisés</a></li>
+            <li><a href="sudoku.html">Sudoku</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="../index.html">🏠</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <main class="quiz-container">
+        <div class="quiz-card">
+            <div class="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="question-counter">Question <span id="current-question">1</span>/<span id="total-questions">10</span></span>
+            </div>
+
+            <div class="quiz-content">
+                <h2 id="question-text">Chargement de la question...</h2>
+                
+                <div class="options-container">
+                    <!-- Options will be dynamically inserted here -->
+                </div>
+
+                <div class="feedback-message" style="display: none;">
+                    <!-- Feedback will be shown here -->
+                </div>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="previous-btn" class="btn btn-secondary" disabled>Précédent</button>
+                <button id="next-btn" class="btn btn-primary" disabled>Suivant</button>
+            </div>
+        </div>
+
+        <div class="timer-container">
+            <div class="timer">
+                <span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+        </div>
+    </main>
+
+    <footer style = "position: fixed; bottom: 0; width:100% ">
+        <p>&copy; 2025 Quizoku-Croisés. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+/* styles.css */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f39c12;
+    --background-color: #f5f6fa;
+    --text-color: #2c3e50;
+    --nav-height: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+.main-nav {
+    background-color: white;
+    height: var(--nav-height);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* .nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+} */
+
+.nav-logo {
+    text-decoration: none; /* Supprime le soulignement */
+    color: #f39c12; /* Couleur attrayante (tomate) */
+    font-weight: bold; /* Mettre le texte en gras */
+    font-size: 1.5em; /* Augmente la taille de la police */
+    transition: color 0.3s ease, transform 0.3s ease; /* Ajoute une transition pour l'animation */
+}
+
+.nav-logo:hover {
+    color: #f39c12; /* Change la couleur au survol (orange) */
+    transform: scale(1.1); /* Agrandit légèrement le logo au survol */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Content */
+.home-container {
+    margin-top: var(--nav-height);
+    padding: 2rem;
+    flex: 1;
+}
+
+.hero-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.game-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid #f39c12;
+    background: transparent;
+    color: #f39c12;
+}
+
+.decorative-image {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.image-placeholder {
+    margin: 2rem auto;
+    max-width: 600px;
+    /* padding-top: 60%; Aspect ratio 5:3 */
+    /* background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); */
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+/* .image-placeholder2 {
+    margin: 2rem auto;
+    max-width: 300px;
+    /* padding-top: 60%; Aspect ratio 1:1 */
+    /* background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); 
+    border-radius: 10px;
+    opacity: 0.8;
+} */
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4a90e2;
+    color: rgb(27, 187, 117);
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    height: 50px;
+}
+
+footer p {
+    font-size: 16px; /* Taille de la police */
+    line-height: 1.5; /* Espacement entre les lignes */
+    margin: 10px 0; /* Marges autour des paragraphes */
+    color: #ffffff; /* Couleur du texte */
+}
+p {
+    font-size: 16px; /* Taille de la police */
+    line-height: 1.5; /* Espacement entre les lignes */
+    margin: 10px 0; /* Marges autour des paragraphes */
+    color: #000000; /* Couleur du texte */
+}
+
+ul {
+    padding-left: 20px;
+    
+}
+
+ul li {
+    margin-left: 0; /* Supprime l'espacement vertical entre les éléments de la liste */
+    list-style-position: left; 
+    
+}
+
+.team-member {
+    display: inline-block; /* Affiche les membres côte à côte */
+    vertical-align: top; /* Aligne les membres en haut */
+    margin: 20px; /* Marge autour de chaque membre */
+    width: 30%; /* Ajustez la largeur selon vos besoins */
+    text-align: center; /* Centre le texte sous chaque image */
+}
+
+.team-photo {
+    width: 100%; /* Rendre l'image responsive */
+    height: auto; /* Conserve le ratio d'aspect */
+    border-radius: 50%; /* Donne un effet circulaire aux photos */
+}

@@ -1,0 +1,57 @@
+.content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    margin: 1.5rem 0;
+    margin-left: 50px; /* Spacing between sections */
+}
+
+.text-content {
+    flex: 1; /* Take remaining space */
+    margin-right: 50px;
+    text-align: justify;
+}
+
+.image-container {
+    display: flex; /* Use flexbox to align images side by side */
+    justify-content: center; /* Center the images within the container */
+    margin: 1.5rem 0; /* Spacing around the container */
+}
+
+.sample-image {
+    width: 300px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    margin: 0 10px; /* Add spacing between images */
+}
+
+.sample-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+h1{
+    font-size: 2.5rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.5rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+h3{
+    font-size: 1rem;
+    color: #f39c12;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+p {
+    font-size: 16px; /* Taille de la police */
+    line-height: 1.5; /* Espacement entre les lignes */
+    margin: 10px 0; /* Marges autour des paragraphes */
+    color: #000000;
+    text-align: center; /* Couleur du texte */
+}

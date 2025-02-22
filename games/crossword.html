@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mots Croisés - Quizoku-Croisés</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/crossword.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <!-- Same navigation -->
+        <a href="index.html" class="nav-logo">Quizoku-Croisés</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="quiz-start.html">Quiz</a></li>
+            <li><a href="crossword.html">Mots Croisés</a></li>
+            <li><a href="sudoku.html">Sudoku</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="../index.html">🏠</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <main class="crossword-container">
+        <div class="game-panel">
+            <div class="crossword-grid-container">
+                <div id="crossword-grid"></div>
+            </div>
+            
+            <div class="clues-panel">
+                <div class="clues-section">
+                    <h3>Horizontalement</h3>
+                    <div id="horizontal-clues" class="clues-list"></div>
+                </div>
+                <div class="clues-section">
+                    <h3>Verticalement</h3>
+                    <div id="vertical-clues" class="clues-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <div class="timer-display">
+                <span id="crossword-timer">00:00</span>
+            </div>
+            <button id="hint-btn" class="btn btn-secondary">Indice</button>
+            <button id="check-btn" class="btn btn-primary">Vérifier</button>
+            <button id="reset-btn" class="btn btn-danger">Réinitialiser</button>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modal-title">Titre</h2>
+                <p id="modal-message">Message</p>
+                <button id="modal-btn" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </main>
+    <br><br>
+
+    <footer style = "position: fixed; bottom: 0; width:100% ">
+        <p>&copy; 2025 Quizoku-Croisés. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/crossword.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.hero {
+    background-color: #ffffff; /* Solid color for the hero section */
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.hero-overlay {
+    background-color: #f1bd68; /* Dark overlay for better text visibility */
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(243, 237, 237, 0.7);
+    margin: 0;
+    color: #69a4e7;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color:#4a90e2;
+}
+
+.btn {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Improved transition */
+}
+
+.btn:hover {
+    background-color: #f39c12;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Smooth transition for product images */
+.product-image {
+    transition: transform 1s ease; /* Improved transition for images */
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.product-card {
+    max-width: 300px;
+    text-align: center;
+
+}
+
+/* .product-card:hover {
+    transform: scale(1.05);
+} */
+
+.product-image,
+.sample-image {
+    width: 100%;
+    max-width: 300px; /* Prevent overflow */
+    transition: transform 1s;
+    border-radius: 10px;
+}
+
+.sample-image {
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4a90e2;
+    color: rgb(27, 187, 117);
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    height: 40px;
+}
+
+footer p {
+    font-size: 16px; /* Taille de la police */
+    line-height: 1.5; /* Espacement entre les lignes */
+    margin: 10px 0; /* Marges autour des paragraphes */
+    color: #ffffff; /* Couleur du texte */
+}
